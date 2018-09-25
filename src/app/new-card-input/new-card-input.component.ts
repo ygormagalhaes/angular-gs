@@ -5,7 +5,7 @@ import { NgForm, NgModel } from '@angular/forms';
   selector: 'app-new-card-input',
   templateUrl: './new-card-input.component.html',
   styleUrls: ['./new-card-input.component.scss'],
-  host: {'class': 'col-4'}
+  host: {'class': 'col-md-4 col-sm-12'}
 })
 export class NewCardInputComponent implements OnInit {
 
