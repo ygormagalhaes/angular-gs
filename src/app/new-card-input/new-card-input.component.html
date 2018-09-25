@@ -1,5 +1,6 @@
 <div class="card">
   <div class="card-block">
-    <input placeholder="Take a note..." class="form-control" [(ngModel)]="newCard.text">
+    <input placeholder="Take a note..." class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="newCard.text"
+      required #inputText="ngModel">
   </div>
 </div>
