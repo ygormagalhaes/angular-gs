@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardService } from './services/card.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(private cardService: CardService) {
+    cardService.get().subscribe((cards: any) => this.cards = cards);
+  }
 
   public cards: Array<any> = [
     {text: 'Card 1'},
